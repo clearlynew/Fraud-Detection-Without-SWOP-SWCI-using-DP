@@ -103,22 +103,7 @@ rm workspace/fraud-detection/ml-context/swarmlearning-client-*.whl 2>/dev/null
 
 ---
 
-# 7. Update Python Dependencies
-
-Update `ml-context/requirements.txt`:
-
-```text
-keras
-pandas
-protobuf==3.15.6
-opencv-python
-tensorflow-privacy==0.7.3
-tensorflow-probability==0.15.0
-```
-
----
-
-# 8. Build ML Docker Image
+# 7. Build ML Docker Image
 
 ```bash
 docker build -t fraud-ml-env ~/swarm-learning/workspace/fraud-detection/ml-context
@@ -126,7 +111,7 @@ docker build -t fraud-ml-env ~/swarm-learning/workspace/fraud-detection/ml-conte
 
 ---
 
-# 9. Run APLS (only if not running or not connected)
+# 8. Run APLS (only if not running or not connected)
 
 ```bash
 docker run -d \
@@ -154,7 +139,7 @@ export SN_API_PORT=30304
 
 ---
 
-# 10. Run SN (Swarm Network Node)
+# 9. Run SN (Swarm Network Node)
 
 ```bash
 cd ~/swarm-learning
@@ -172,7 +157,7 @@ cd ~/swarm-learning
 
 ---
 
-# 11. Monitor SN until ready
+# 10. Monitor SN until ready
 
 ```bash
 docker logs -f sn1
@@ -186,7 +171,7 @@ swarm.blCnt : INFO : Starting SWARM-API-SERVER on port: 30304
 
 ---
 
-# 12. Baseline Training (WITHOUT Differential Privacy)
+# 11. Baseline Training (WITHOUT Differential Privacy)
 
 ## Run SL1 (Baseline)
 
@@ -246,7 +231,7 @@ swarm.blCnt : INFO : Starting SWARM-API-SERVER on port: 30304
 
 ---
 
-# 13. Differential Privacy Training (DP-SGD Enabled)
+# 12. Differential Privacy Training (DP-SGD Enabled)
 
 ## Run SL1 (DP Enabled)
 
@@ -312,7 +297,7 @@ swarm.blCnt : INFO : Starting SWARM-API-SERVER on port: 30304
 
 ---
 
-# 14. Monitor Training
+# 13. Monitor Training
 
 ```bash
 docker logs -f sl1

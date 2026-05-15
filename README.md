@@ -1,6 +1,3 @@
-Here's the markdown content you can copy:
-
-````markdown
 # Fraud Detection with Swarm Learning + Differential Privacy
 
 ## Overview

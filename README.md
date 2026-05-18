@@ -284,7 +284,7 @@ docker logs -f ml2 > ~/swarm-learning/workspace/fraud-detection/results/exp1_bas
 
 ---
 
-# Experiments 2–9
+# Experiments 2–10
 
 Use the same commands while changing:
 

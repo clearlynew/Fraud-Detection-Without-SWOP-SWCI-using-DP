@@ -24,6 +24,32 @@
 
 ---
 
+## L2 Norm Clipping Experiments (Without SWOP, Noise Multiplier fixed)
+
+> Fixed: `noise_multiplier=1.0`, `optimizer=sgd`, `epochs=8`. Varying `l2_norm_clip` to isolate its effect on utility.
+
+### ML1
+
+| Experiment                          | Noise Multiplier | L2 Norm Clip | Epsilon | Delta     | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |
+| ----------------------------------- | ---------------- | ------------ | ------- | --------- | ------ | ------- | ------ | ----------------- | ------------------- |
+| Exp4 (baseline clip=1.0)            | 1.0              | 1.0          | 1.3626  | 0.0002857 | 0.5671 | 0.7978  | 0.8544 | 142.36            | 2.37                |
+| Exp6 (strong DP, clip=0.5)          | 1.0              | 0.5          | 1.3626  | 0.0002857 | 0.5272 | 0.8137  | 0.8651 | 145.72            | 2.43                |
+| Exp8 (strong DP, clip=0.7)          | 1.0              | 0.7          | 1.3626  | 0.0002857 | 0.5307 | 0.8176  | 0.8699 | 141.96            | 2.37                |
+| Exp9 (strong DP, clip=0.9)          | 1.0              | 0.9          | 1.3626  | 0.0002857 | 0.5485 | 0.8105  | 0.8643 | 141.17            | 2.35                |
+| Exp7 (extreme DP, clip=0.5)         | 3.0              | 0.5          | 0.2619  | 0.0002857 | 0.5788 | 0.7855  | 0.8459 | 144.00            | 2.40                |
+
+### ML2
+
+| Experiment                          | Noise Multiplier | L2 Norm Clip | Epsilon | Delta   | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |
+| ----------------------------------- | ---------------- | ------------ | ------- | ------- | ------ | ------- | ------ | ----------------- | ------------------- |
+| Exp4 (baseline clip=1.0)            | 1.0              | 1.0          | 1.2792  | 0.00025 | 0.5955 | 0.7766  | 0.8202 | 136.83            | 2.28                |
+| Exp6 (strong DP, clip=0.5)          | 1.0              | 0.5          | 1.2792  | 0.00025 | 0.5498 | 0.8024  | 0.8405 | 139.61            | 2.33                |
+| Exp8 (strong DP, clip=0.7)          | 1.0              | 0.7          | 1.2792  | 0.00025 | 0.5531 | 0.8035  | 0.8443 | 138.05            | 2.30                |
+| Exp9 (strong DP, clip=0.9)          | 1.0              | 0.9          | 1.2792  | 0.00025 | 0.5857 | 0.7943  | 0.8367 | 140.02            | 2.33                |
+| Exp7 (extreme DP, clip=0.5)         | 3.0              | 0.5          | 0.2464  | 0.00025 | 0.6033 | 0.7663  | 0.8126 | 137.74            | 2.30                |
+
+---
+
 # Results (Hima)
   # ML1
 

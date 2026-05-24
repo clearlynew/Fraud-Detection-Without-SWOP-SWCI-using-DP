@@ -118,3 +118,28 @@
 | Exp6 — Medium DP (Adam)     | Yes        | 0.5              | Adam      | 8      | 10.3322    | 0.00025 | 1.9559 | 0.3247  | 0.4745 | 132.60            | 2.21                |
 
 ---
+
+# Results (Goutham)
+
+`The following experiments were conducted by directly initializing SL nodes without using a SWOP node`
+## ML1
+
+| Experiment          | DP Enabled | Noise Multiplier | Epsilon    | Delta     | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |
+| ------------------- | ---------- | ---------------- | ---------- | --------- | ------ | ------- | ------ | ----------------- | ------------------- |
+| Exp1 - Baseline | No         | 0.0              | —          | —         | 0.9512 | 0.8764  | 0.9019 | 140.83            | 2.34                |
+| Exp2 - Weak DP | Yes        | 0.1              | 34178.1677 | 0.0002857 | 0.5621 | 0.8019  | 0.8576 | 143.16            | 2.39                |
+| Exp3 - Medium DP | Yes        | 0.5              | 10.6858    | 0.0002857 | 0.5794 | 0.7861  | 0.8442 | 141.16            | 2.35                |
+| Exp4 - Strong DP | Yes        | 1.0              | 1.3626     | 0.0002857 | 0.6469 | 0.7394  | 0.8074 | 146.74            | 2.45                |
+| Exp5 - Extreme DP | Yes        | 3.0              | 0.2619     | 0.0002857 | 0.5807 | 0.7913  | 0.8499 | 148.14            | 2.47                |
+
+## ML2
+
+| Experiment          | DP Enabled | Noise Multiplier | Epsilon    | Delta   | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |
+| ------------------- | ---------- | ---------------- | ---------- | ------- | ------ | ------- | ------ | ----------------- | ------------------- |
+| Exp1 - Baseline | No         | 0.0              | —          | —       | 0.9663 | 0.8652  | 0.8780 | 137.40            | 2.29                |
+| Exp2 - Weak DP | Yes        | 0.1              | 38389.3765 | 0.00025 | 0.5847 | 0.7828  | 0.8258 | 135.94            | 2.27                |
+| Exp3 - Medium DP | Yes        | 0.5              | 10.3322    | 0.00025 | 0.6123 | 0.7624  | 0.8060 | 132.29            | 2.20                |
+| Exp4 - Strong DP | Yes        | 1.0              | 1.2792     | 0.00025 | 0.6946 | 0.7103  | 0.7626 | 139.39            | 2.32                |
+| Exp5 - Extreme DP | Yes        | 3.0              | 0.2464     | 0.00025 | 0.6120 | 0.7706  | 0.8183 | 134.36            | 2.24                |
+
+---

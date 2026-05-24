@@ -14,12 +14,12 @@
     "delta": 0.00025
   },
   "results": {
-    "loss": 0.6055,
-    "auc_roc": 0.7789,
-    "auc_pr": 0.8239
+    "loss": 0.7109,
+    "auc_roc": 0.7085,
+    "auc_pr": 0.7576
   },
   "timing": {
-    "training_time_seconds": 137.26,
-    "training_time_minutes": 2.29
+    "training_time_seconds": 134.53,
+    "training_time_minutes": 2.24
   }
 }

@@ -1,0 +1,168 @@
+***** Starting model = fraud-detection
+----------------------------------------------------------------
+Loading train dataset /app-data/SB19_CCFDUBL_TRAIN.csv ..
+Size of training dataset: 3500
+----------------------------------------------------------------
+Loading test dataset /app-data/SB19_CCFDUBL_TEST.csv ..
+Size of test dataset: 328
+----------------------------------------------------------------
+2026-05-20 08:31:37.401339: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+***** Using SGD optimizer
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 1)                 31        
+                                                                 
+=================================================================
+Total params: 31
+Trainable params: 31
+Non-trainable params: 0
+_________________________________________________________________
+None
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : SwarmCallbackBase logger is set
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : Allow valData for evaluation
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : val data type is <class 'tensorflow.python.data.ops.dataset_ops.PrefetchDataset'>
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : valBatchSize is 32
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : ***Swarm Callback Params: Inside SwarmCallbackBase at user side***
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : syncFrequency: 128
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : minPeers: 2
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : trainingContract: defaultbb.cqdb.sml.hpe
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : valBatchSize: 32
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : useAdaptiveSync: False
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : checkinModelOnTrainEnd: CheckinModel.snapshot
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : nodeWeightage: 1
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : mergeMethod: SLMergeMethod.mean
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : ==============================
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : ****************************************************
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : ***** Is Swarm callback in loopback mode: False *****
+2026-05-20 08:31:37,431 : SwarmCallback : INFO : ****************************************************
+2026-05-20T08:31:37.431993 /tmp/hpe-swarm/trained_weights.pkl: waiting for weight files to be created
+2026-05-20T08:31:38.433119 /tmp/hpe-swarm/merged_weights.pkl: waiting for weight files to be created
+Starting training ...
+2026-05-20 08:31:48,891 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:31:48
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 1
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:32:21
+ 1/11 [=>............................] - ETA: 1s - loss: 0.9085 - auc_roc: 0.1437 - auc_pr: 0.446511/11 [==============================] - 0s 538us/step - loss: 0.8837 - auc_roc: 0.1183 - auc_pr: 0.3566
+2026-05-20 08:32:21,247 : SwarmCallback : INFO : Calculated local loss using merged parameters = 0.883701503276825
+2026-05-20 08:32:27,311 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+Epoch 1/8
+  1/109 [..............................] - ETA: 30s - loss: 0.7442 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+00104/109 [===========================>..] - ETA: 0s - loss: 0.0198 - auc_roc: 0.4747 - auc_pr: 5.3243e-04     109/109 [==============================] - 0s 631us/step - loss: 0.0246 - auc_roc: 0.4755 - auc_pr: 5.0922e-04 - val_loss: 1.5920 - val_auc_roc: 0.7687 - val_auc_pr: 0.7525
+Epoch 2/8
+  1/109 [..............................] - ETA: 1s - loss: 1.4900e-05 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+002026-05-20 08:32:27,700 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:32:27
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 2
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:32:35
+ 1/11 [=>............................] - ETA: 0s - loss: 2.4238 - auc_roc: 0.7333 - auc_pr: 0.790711/11 [==============================] - 0s 464us/step - loss: 2.3547 - auc_roc: 0.7885 - auc_pr: 0.8024
+2026-05-20 08:32:35,449 : SwarmCallback : INFO : Calculated local loss using merged parameters = 2.354745626449585
+2026-05-20 08:32:41,583 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+ 20/109 [====>.........................] - ETA: 1:05 - loss: 0.0056 - auc_roc: 0.9984 - auc_pr: 0.3069           69/109 [=================>............] - ETA: 8s - loss: 0.4154 - auc_roc: 0.9154 - auc_pr: 0.7482  109/109 [==============================] - 14s 130ms/step - loss: 0.2477 - auc_roc: 0.9210 - auc_pr: 0.7398 - val_loss: 2.5646 - val_auc_roc: 0.7767 - val_auc_pr: 0.7880
+Epoch 3/8
+  1/109 [..............................] - ETA: 0s - loss: 1.2844e-05 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+002026-05-20 08:32:41,730 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:32:41
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 3
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:32:52
+ 1/11 [=>............................] - ETA: 0s - loss: 2.4898 - auc_roc: 0.7229 - auc_pr: 0.787311/11 [==============================] - 0s 2ms/step - loss: 2.2685 - auc_roc: 0.7914 - auc_pr: 0.8162
+2026-05-20 08:32:53,020 : SwarmCallback : INFO : Calculated local loss using merged parameters = 2.2684881687164307
+2026-05-20 08:32:59,107 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+ 39/109 [=========>....................] - ETA: 32s - loss: 0.0191 - auc_roc: 0.4960 - auc_pr: 7.7626e-04        88/109 [=======================>......] - ETA: 4s - loss: 0.3865 - auc_roc: 0.9190 - auc_pr: 0.7666     109/109 [==============================] - 17s 162ms/step - loss: 0.2863 - auc_roc: 0.9227 - auc_pr: 0.7610 - val_loss: 2.1418 - val_auc_roc: 0.8056 - val_auc_pr: 0.8250
+Epoch 4/8
+  1/109 [..............................] - ETA: 0s - loss: 1.0236e-05 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+002026-05-20 08:32:59,228 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:32:59
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 4
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:33:07
+ 1/11 [=>............................] - ETA: 0s - loss: 2.2542 - auc_roc: 0.7354 - auc_pr: 0.797411/11 [==============================] - 0s 1ms/step - loss: 2.0337 - auc_roc: 0.8058 - auc_pr: 0.8303
+2026-05-20 08:33:07,535 : SwarmCallback : INFO : Calculated local loss using merged parameters = 2.0336873531341553
+2026-05-20 08:33:11,105 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+ 58/109 [==============>...............] - ETA: 10s - loss: 0.0114 - auc_roc: 0.7489 - auc_pr: 0.5017            97/109 [=========================>....] - ETA: 1s - loss: 0.4173 - auc_roc: 0.9227 - auc_pr: 0.7883 109/109 [==============================] - 12s 111ms/step - loss: 0.3353 - auc_roc: 0.9258 - auc_pr: 0.7846 - val_loss: 2.0732 - val_auc_roc: 0.8008 - val_auc_pr: 0.8296
+Epoch 5/8
+  1/109 [..............................] - ETA: 0s - loss: 5.0239e-06 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+00 55/109 [==============>...............] - ETA: 0s - loss: 6.0959e-04 - auc_roc: 1.0000 - auc_pr: 1.0000        2026-05-20 08:33:11,250 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:33:11
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 5
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:33:22
+ 1/11 [=>............................] - ETA: 0s - loss: 2.7852 - auc_roc: 0.7167 - auc_pr: 0.784711/11 [==============================] - 0s 1ms/step - loss: 2.3031 - auc_roc: 0.7804 - auc_pr: 0.7943
+2026-05-20 08:33:22,567 : SwarmCallback : INFO : Calculated local loss using merged parameters = 2.3030714988708496
+2026-05-20 08:33:28,650 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+ 77/109 [====================>.........] - ETA: 7s - loss: 4.8202e-04 - auc_roc: 1.0000 - auc_pr: 1.0000109/109 [==============================] - 18s 162ms/step - loss: 0.5736 - auc_roc: 0.9164 - auc_pr: 0.7540 - val_loss: 2.2598 - val_auc_roc: 0.7697 - val_auc_pr: 0.7914
+Epoch 6/8
+  1/109 [..............................] - ETA: 1s - loss: 6.8951e-06 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+00 74/109 [===================>..........] - ETA: 0s - loss: 0.0013 - auc_roc: 1.0000 - auc_pr: 1.0000            2026-05-20 08:33:28,773 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:33:28
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 6
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:33:37
+ 1/11 [=>............................] - ETA: 0s - loss: 2.5507 - auc_roc: 0.7208 - auc_pr: 0.786111/11 [==============================] - 0s 585us/step - loss: 2.1303 - auc_roc: 0.7746 - auc_pr: 0.7864
+2026-05-20 08:33:37,082 : SwarmCallback : INFO : Calculated local loss using merged parameters = 2.130316972732544
+2026-05-20 08:33:43,219 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+ 96/109 [=========================>....] - ETA: 1s - loss: 0.0092 - auc_roc: 0.7482 - auc_pr: 0.0955109/109 [==============================] - 15s 135ms/step - loss: 0.9295 - auc_roc: 0.8955 - auc_pr: 0.7622 - val_loss: 2.0828 - val_auc_roc: 0.7742 - val_auc_pr: 0.7859
+Epoch 7/8
+  1/109 [..............................] - ETA: 0s - loss: 3.8069e-06 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+00 42/109 [==========>...................] - ETA: 0s - loss: 6.6154e-04 - auc_roc: 1.0000 - auc_pr: 1.0000         91/109 [========================>.....] - ETA: 0s - loss: 0.0078 - auc_roc: 0.7484 - auc_pr: 0.5010    109/109 [==============================] - 0s 1ms/step - loss: 0.0065 - auc_roc: 0.7483 - auc_pr: 0.5009 - val_loss: 1.9361 - val_auc_roc: 0.7746 - val_auc_pr: 0.7793
+Epoch 8/8
+  1/109 [..............................] - ETA: 0s - loss: 8.5662e-06 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+002026-05-20 08:33:43,437 : SwarmCallback : INFO : Starting Swarm merging round ...
+
+ Writing trained weights to file:2026-05-20 08:33:43
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 7
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:33:53
+ 1/11 [=>............................] - ETA: 0s - loss: 2.4002 - auc_roc: 0.7271 - auc_pr: 0.788411/11 [==============================] - 0s 1ms/step - loss: 1.9869 - auc_roc: 0.7731 - auc_pr: 0.7856
+2026-05-20 08:33:53,696 : SwarmCallback : INFO : Calculated local loss using merged parameters = 1.9869009256362915
+2026-05-20 08:33:59,779 : SwarmCallback : INFO : Merge Done: RVInt [cur: 128 Nxt: 128]
+  6/109 [>.............................] - ETA: 5:36 - loss: 3.2398e-04 - auc_roc: 0.0000e+00 - auc_pr: 0.0000e+00 78/109 [====================>.........] - ETA: 6s - loss: 0.2515 - auc_roc: 0.9325 - auc_pr: 0.7396              109/109 [==============================] - 16s 152ms/step - loss: 0.1826 - auc_roc: 0.9356 - auc_pr: 0.7360 - val_loss: 1.8474 - val_auc_roc: 0.7790 - val_auc_pr: 0.7847
+2026-05-20 08:33:59,852 : SwarmCallback : INFO : Finished local training !!!
+2026-05-20 08:33:59,852 : SwarmCallback : INFO : Swarm training may continue till trainings in min peers are done!
+2026-05-20 08:33:59,852 : SwarmCallback : INFO : Final merging starts at training end. Waiting for other peers to complete ...
+
+ Writing trained weights to file:2026-05-20 08:33:59
+
+ Recieved response from SL sessionID: "0efe21db91b0405087c4a6016e530a94"
+syncSeqNum: 1
+lossSeqNum: 1
+fileName: "merged_weights.pkl"
+:2026-05-20 08:34:06
+ 1/11 [=>............................] - ETA: 0s - loss: 2.2828 - auc_roc: 0.7333 - auc_pr: 0.795611/11 [==============================] - 0s 1ms/step - loss: 1.8879 - auc_roc: 0.7773 - auc_pr: 0.7902
+2026-05-20 08:34:06,621 : SwarmCallback : INFO : Calculated local loss using merged parameters = 1.8879375457763672
+ 1/11 [=>............................] - ETA: 0s - loss: 2.2499 - auc_roc: 0.7437 - auc_pr: 0.798711/11 [==============================] - 0s 979us/step - loss: 1.8652 - auc_roc: 0.7776 - auc_pr: 0.7878
+2026-05-20 08:34:23,022 : SwarmCallback : INFO : Calculated local loss using merged parameters = 1.86522376537323
+2026-05-20 08:34:29,113 : SwarmCallback : INFO : All peers and Swarm training rounds finished. Final Swarm model was loaded.
+Training done!
+***** Training time: 160.25s (2.67 min)
+ 1/11 [=>............................] - ETA: 0s - loss: 2.2499 - auc_roc: 0.7437 - auc_pr: 0.798711/11 [==============================] - 0s 2ms/step - loss: 1.8652 - auc_roc: 0.7776 - auc_pr: 0.7878
+***** Test loss: 1.8652
+***** Test auc_roc: 0.7776
+***** Test auc_pr: 0.7878
+Results saved to /results/exp1_baseline_sl1.json
+2026-05-20 08:34:29.302695: W tensorflow/python/util/util.cc:368] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+Saved the trained model!

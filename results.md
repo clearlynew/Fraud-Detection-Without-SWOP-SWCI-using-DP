@@ -122,6 +122,9 @@
 # Results (Goutham)
 
 `The following experiments were conducted by directly initializing SL nodes without using a SWOP node`
+- Number of epochs : 8
+- L2 Norm : 1.0
+- Optimizer : SGD
 ## ML1
 
 | Experiment          | DP Enabled | Noise Multiplier | Epsilon    | Delta     | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |

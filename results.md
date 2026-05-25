@@ -159,6 +159,8 @@
 ---
 # Results (Anushka)
 
+## Without SWOP Results
+
 ## ML1
 
 | Experiment          | DP Enabled | Noise Multiplier | Epsilon    | Delta     | Loss   | AUC-ROC | AUC-PR | Training Time (s) | Training Time (min) |
@@ -180,5 +182,31 @@
 | Without SWOP (Exp3) | Yes        | 0.5              | 10.3322    | 0.00025 | 0.5689 | 0.8001  | 0.8405 | 136.15            | 2.27                |
 | Without SWOP (Exp4) | Yes        | 1.0              | 1.2792     | 0.00025 | 0.6331 | 0.7526  | 0.7980 | 137.24            | 2.29                |
 | Without SWOP (Exp5) | Yes        | 3.0              | 0.2464     | 0.00025 | 0.6372 | 0.7497  | 0.7954 | 136.24            | 2.27                |
+
+---
+
+## With SWOP Results
+
+## ML1
+
+| SWOP      | DP Enabled | Noise Multiplier | Epsilon    | Delta     | Loss   | AUC-ROC | Training Time (s) | Training Time (min) |
+| ---------- | ---------- | ---------------- | ---------- | --------- | ------ | -------- | ----------------- | ------------------- |
+| With SWOP | No         | 0.0              | —          | —         | 1.0797 | 0.8409   | 163.07            | 2.72                |
+| With SWOP | Yes        | 0.1              | 34178.1677 | 0.0002857 | 0.6349 | 0.7515   | 171.95            | 2.87                |
+| With SWOP | Yes        | 0.5              | 10.6858    | 0.0002857 | 0.6240 | 0.7613   | 166.66            | 2.78                |
+| With SWOP | Yes        | 1.0              | 1.3626     | 0.0002857 | 0.5509 | 0.8028   | 165.56            | 2.76                |
+| With SWOP | Yes        | 3.0              | 0.2619     | 0.0002857 | 0.5602 | 0.8012   | 170.73            | 2.85                |
+
+---
+
+## ML2
+
+| SWOP      | DP Enabled | Noise Multiplier | Epsilon    | Delta   | Loss   | AUC-ROC | Training Time (s) | Training Time (min) |
+| ---------- | ---------- | ---------------- | ---------- | ------- | ------ | -------- | ----------------- | ------------------- |
+| With SWOP | No         | 0.0              | —          | —       | 1.1345 | 0.8357   | 165.91            | 2.77                |
+| With SWOP | Yes        | 0.1              | 38389.3765 | 0.00025 | 0.6689 | 0.7257   | 169.67            | 2.83                |
+| With SWOP | Yes        | 0.5              | 10.3322    | 0.00025 | 0.6529 | 0.7363   | 164.88            | 2.75                |
+| With SWOP | Yes        | 1.0              | 1.2792     | 0.00025 | 0.5926 | 0.7839   | 167.20            | 2.79                |
+| With SWOP | Yes        | 3.0              | 0.2464     | 0.00025 | 0.5910 | 0.7857   | 167.42            | 2.79                |
 
 ---

@@ -352,7 +352,7 @@ userEnvars:
 Go to:
 
 ```text id="g2y2xv"
-swci/taskdefs/swarm_fd/task.yaml
+swci/taskdefs/swarm_fd_task.yaml
 ```
 
 Add:

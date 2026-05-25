@@ -1,0 +1,25 @@
+{
+  "config": {
+    "dp_enabled": false,
+    "noise_multiplier": null,
+    "l2_norm_clip": null,
+    "microbatches": null,
+    "optimizer": "sgd",
+    "learning_rate": "default",
+    "metric": "both",
+    "epochs": 8
+  },
+  "privacy": {
+    "epsilon": null,
+    "delta": null
+  },
+  "results": {
+    "loss": 0.5547,
+    "auc_roc": 0.8763,
+    "auc_pr": 0.9158
+  },
+  "timing": {
+    "training_time_seconds": 164.69,
+    "training_time_minutes": 2.74
+  }
+}
